@@ -22,10 +22,10 @@ public class Registro {
 
         if (!legajo.startsWith("A") && !legajo.startsWith("B") && !legajo.startsWith("C")) {
             throw new DatosIncorrectosException("Empezar con A,B o C");
-        }
-
-        if(legajo.length() != 4){
-            throw new DatosIncorrectosException("El legajo debe de tener 4 carateres unicamente");
+        } else {
+            if (legajo.length() != 4) {
+                throw new DatosIncorrectosException("El legajo debe de tener 4 carateres unicamente");
+            }
         }
 
         usuario.setLegajo(legajo);
